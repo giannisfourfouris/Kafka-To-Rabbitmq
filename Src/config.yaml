@@ -1,0 +1,25 @@
+kafka:
+  bootstrap_servers: 'localhost:9092'
+  security_protocol: 'SASL_SSL'
+  sasl_mechanism: 'PLAIN'
+  sasl_username: '<CLUSTER_API_KEY>'
+  sasl_password: '<CLUSTER_API_SECRET>'
+  group_id: 'foo'
+  auto_offset_reset: 'earliest'
+  topic: 'myTopic'
+  batch_size: 2
+  timeout: 1
+  min_commit_count: 0
+  enable_auto_commit: 'false'
+
+rabbitmq:
+  host: '127.0.0.1'
+  port: 5672
+  username: 'guest'
+  password: 'guest'
+  virtual_host: '/'
+  erase_on_connect: true
+  queue_name: 'sample'
+  durable: True
+  exchange_type: 'topic'
+  exchange_name: 'sasexch'
